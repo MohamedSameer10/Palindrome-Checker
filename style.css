@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(234, 152, 45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 460px;
+    height: 190px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 0.7rem;
+    background-color: rgb(0, 8, 79);
+}
+
+.container h1{
+    font-size: 1.5rem;
+}
+
+.move{
+    margin-top: 0.6rem;
+}
+
+
+.container h1{
+    color: rgb(255, 247, 247);
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+
+
+.container .input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.container .input label{
+    color: rgb(252, 215, 3);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.container .input input{
+    border-radius: 0.4rem;
+    outline: none;
+    height: 5vh;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.container .move button{
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 1px solid yellow;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+}
+
+
+#result span{
+    color: rgb(255, 36, 36);
+}
+.container button:hover{
+    background-color: yellow;
+    color: black;
+}
+
+#result{
+    margin-top: 2rem;
+    scale: 0;
+    opacity: 0;
+    text-align: center;
+    color: rgb(6, 244, 6);
+}
+
+.result{
+    animation: opty 1s forwards;
+    animation-delay: 0.8s;
+}
+
+
+.animate{
+    animation: height 1s linear forwards;
+}
+
+
+@keyframes height{
+    to{
+        height: 270px;
+    }
+}
+
+@keyframes opty {
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@media screen and (max-width : 485px){
+
+    .container{
+        width: 360px;
+        height: 210px;
+        padding-left: 1rem;
+    }
+
+    .container h1,
+    .container .input label
+    ,.container #result{
+        font-size: 1.1rem;
+    }
+
+    .container button{
+        font-size: 1rem !important; 
+    }
+
+    @keyframes height {
+        to{
+            height: 250px;
+        }
+    }
+}
+
+@media (max-width : 380px) and (min-width : 180px){
+    .container{
+        width: 260px;
+        height: 230px;
+    }
+
+    .container h1,
+    .container .input label{
+        font-size: 1.1rem;
+    }
+
+    .container button{
+        font-size: 0.8rem !important;
+    }
+
+    .container .input input{
+        width: 100%;
+    }
+
+    .container .input  input{
+        font-size: 1rem;
+    }
+
+
+    @keyframes height {
+        to{
+            height: 260px;
+        }
+    }
+}
+
+@media screen and (max-width : 270px) and (min-width : 180px){
+    .container{
+        width: 200px;
+        height: 190px;
+    }
+
+    .container h1,
+    .container .input label{
+        font-size: 0.7rem;
+    }
+
+    .container button{
+        font-size: 0.6rem;
+    }
+
+    .container .input  input{
+        font-size: 1rem;
+    }
+
+    .container #result{
+        font-size: 0.8rem;
+    }
+
+    @keyframes height {
+        to{
+            height: 220px;
+        }
+    }
+}
+
